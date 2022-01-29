@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Wire+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Wire+One&display=swap');
+body{
+	font-family: sans-serif;
+}
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+	/* outline: 1px solid red; */
+}
+span{
+	opacity: 0;
+	transition: all 0.4 ease;
+}
+span.fade{
+	opacity: 1;
+	transition: all 0.4 ease;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+
+.btn{
+	background-color:#f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+	border-radius: 30px;
+	transition: transform .4s; 
+}
+.btn:hover{
+	transform: scale(1.2);
+}
+
+
+/*header*/
+.header{
+	background-color: #2f3240;
+	padding: 12px 0;
+	line-height: 1.5;
+}
+.main-header{
+    display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+	
+}
+
+.header .logo,
+.header .nav{
+	padding:0 15px;
+}
+.header .logo a{
+	font-size: 30px;
+	color: #ffffff;
+	text-transform: capitalize;
+}
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 40px;
+}
+.header .nav ul li a{
+	display: block;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	padding: 10px 0;
+	transition: all 0.5s ease;
+}
+
+.header .nav ul li a.active,
+.header .nav ul li a:hover{
+	color: #f3a93d;
+	
+}
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	cursor: pointer;
+	border:none;
+	display: none;
+	margin-right: 15px;
+}
+.nav-toggler:focus{
+	outline: none;
+	box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+.nav-toggler span{
+    height: 2px;
+    width: 20px;
+    background-color: #2f3240 ;
+    display: block;
+    margin:auto;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.nav-toggler.active span{
+	background-color: transparent;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: #2f3240;
+	transition: all 0.3s ease;
+}
+.logo a {
+	font-family: 'Open Sans', sans-serif;
+}
+.nav ul li{
+	font-family: 'Open Sans', sans-serif;
+
+}
+.nav-toggler span::before{
+	transform: translateY(-6px);
+}
+.nav-toggler.active span::before{
+	transform: rotate(45deg);
+}
+.nav-toggler span::after{
+	transform: translateY(6px);
+}
+.nav-toggler.active span::after{
+	transform: rotate(135deg);
+}
+
+
+
+/* The Start of About me section */
+#about{
+	width: 100%;
+	padding: 100px 0px 160px;
+	background-color: #2f3240 ;
+	
+}
+#about img{
+	height: auto;
+	width: 370px;
+	clip-path: circle();
+}
+.about-text{
+	padding: 0px 0px 0px 90px;
+}
+.main{
+	width: 1130px;
+	max-width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.about-text h2{
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+.about-text h5{
+	color: white;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+	font-family: 'Open Sans', sans-serif;
+}
+.about-text p{
+	color: #fcfc;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 45px;
+	font-family: 'Open Sans', sans-serif;
+	
+}
+button{
+	background-color: red;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 13px 30px;
+	border-radius: 30px;
+	transition: .4s; 
+}
+button:hover{
+	background-color: transparent;
+	border: 2px solid orange;
+	cursor: pointer;
+}
+
+
+/* The End of About me section */
+
+
+
+
+/*The start of Eductaion */
+#education{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 25px;
+}
+#education h2{
+	color: #6cafa3;
+}
+
+.hero-section{
+	display: flex;
+	flex-direction: row;
+	padding: 25px 5px 0px 300px;
+	
+}
+
+.education-name{
+	width: 27%;
+}
+
+.education-name h3 a{
+	color: #6cafa3;
+	text-decoration: none;
+}
+
+.decribe-schools{
+	width: 80%;
+}
+
+
+.decribe-schools p, h4{
+	width: 75%;
+	padding-top: 10px;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+/*The end of Eductaion */
+
+
+
+/*The start of Experience/Education */
+
+#experience{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 36px;
+
+}
+
+#experience h2{
+	color: #6cafa3;
+}
+/*The end of Experience/Education */
+
+/* Skills*/
+#skills{
+	background: white;
+	padding: 10px 0px;
+	margin-top: 30px;
+}
+.skills-title {
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 0px;
+	font-size: 25px;
+	font-family: 'Open Sans', sans-serif;
+}
+.all-boxes{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	min-height: 400px;
+
+}
+.box h5{
+	color: white;
+	font-size: 23px;
+	margin-bottom: 15px;
+	font-family: 'Open Sans', sans-serif;
+}
+.box{
+	height: 305px;
+	width: 335px;
+	background: #191919;
+	padding: 20px 35px;
+	border-radius: 20px;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+.skills-text p{	
+	color: white;
+	padding-left: 10px;
+	font-size: 15px;
+	line-height: 27px;
+	margin-bottom: 25px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*End of Skills/*
+
+
+/*The footer starts here */
+#contact{
+	background: #111;
+	padding: 35px 0px 35px 0px;
+	margin-top: 55px;
+}
+.footer-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+	color: white;
+}
+.footer-content p{
+    margin: 10px auto;
+    line-height: 18px;
+    font-size: 14px;
+	color: white;
+}
+.socials ul{
+	display: flex;
+	flex-direction: row;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.socials li{
+    margin: 0 15px;
+}
+/*The footer ends here */
+
+/*Media queries starts here*/
+@media(max-width: 991px){
+	.nav-toggler{
+		display: block;
+	}
+	
+	.header .nav{
+		width: 100%;
+		padding:0;
+		max-height: 0px;
+		overflow: hidden;
+		visibility: hidden;
+		transition: all 0.5s ease;
+	}
+	.header .nav.open{
+		visibility: visible;
+	}
+	.header .nav ul{
+		padding:12px 15px 0;
+		margin-top: 12px;
+		border-top:1px solid rgba(255,255,255,0.2);
+	}
+	.header .nav ul li{
+		display: block;
+		margin:0;
+	}
+	.education-name{
+		width: 30%;
+	}
+}
+
+ @media(max-width:768px){
+
+	#about img{
+		width: 290px;
+		
+	}
+	.about-text{
+		padding: 0px 0px 0px 0px;
+	}
+	.main{
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: flex-start;	
+	}
+	.about-text h2{
+		font-size: 55px;
+		margin-top: 35px;
+	}
+	/*Education Starts*/
+	#education{
+		display: flex;
+		flex-direction: column;
+		
+		
+	}
+	.hero-section{
+		display: flex;
+		flex-direction: row;
+		padding: 25px 5px 0px 10px;
+		
+	}
+
+	.all-boxes{
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	
+}
+
+@media(max-width:520px){
+	#education{
+		display: flex;
+		flex-direction: column;
+		
+		
+	}
+	.hero-section{
+		display: flex;
+		flex-direction: column;
+		padding: 25px 5px 0px 10px;
+		
+	}
+	.decribe-schools{
+		width: auto;
+	}
+	.education-name h3{
+		padding: 0px 0px 10px 0px;
+	}
+	.decribe-schools p, h4{
+	width: 100%;
+	}
+}
+
+/*Media queries ends here*/
